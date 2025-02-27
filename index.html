@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CLONE WINDOW</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typewriter-effect@2.18.0/dist/core.js"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-headColor: #0f0f12;
+        --color-bodyColor: #0f0f12;
+        --color-textBigColor: #cccccc;
+
+        --text-bigText: 100px;
+      }
+    </style>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- bg-[url(windows11bg.jpg)] bg รูป -->
+    <!-- bg-[url(bg1.png)] bg รูป -->
+    <!-- container  bg สีดำ -->
+    <!-- bg-purple bg ม่วง -->
+    <!-- ปุ่มเปิดป๊อปอัพ -->
+
+    <div class="flex flex-col min-h-screen w-full">
+      <div class="gradient-bg z-0 absolute inset-0">
+        <div class="text-container z-10"></div>
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur
+                in="SourceGraphic"
+                stdDeviation="10"
+                result="blur"
+              />
+              <feColorMatrix
+                in="blur"
+                mode="matrix"
+                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                result="goo"
+              />
+              <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+          </defs>
+        </svg>
+        <div class="gradients-container z-0 absolute inset-0">
+          <div class="g1"></div>
+          <div class="g2"></div>
+          <div class="g3"></div>
+          <div class="g4"></div>
+          <div class="g5"></div>
+          <div class="interactive"></div>
+        </div>
+        <div class="flex justify-between p-4 z-50 absolute inset-0">
+          <!-- ฝั่งซ้าย -->
+          <div class="space-x-4">
+            <div class="img-chrome1">
+              <div
+                class="icon-main hover:bg-blue-200 w-30 h-30 flex flex-col items-center cursor-pointer"
+                id="openModal1"
+              >
+                <img src="ggchrome.png" alt="" class="w-20 h-20" />
+                <h1 class="text-sm text-white text-shadow">google chrome</h1>
+              </div>
+            </div>
+
+            <div class="img-chrome2">
+              <div
+                class="icon-main hover:bg-blue-200 w-30 h-30 flex flex-col items-center cursor-pointer"
+                id="openModal2"
+              >
+                <img src="ggchrome.png" alt="" class="w-20 h-20" />
+                <h1 class="text-sm text-white text-shadow">google chrome</h1>
+              </div>
+            </div>
+
+            <div class="img-chrome3">
+              <div
+                class="icon-main hover:bg-blue-200 w-30 h-30 flex flex-col items-center cursor-pointer"
+                id="openModal3"
+              >
+                <img src="terminalicon2.png" alt="" class="w-20 h-20" />
+                <h1 class="text-sm text-white text-shadow">terminal</h1>
+              </div>
+            </div>
+          </div>
+
+          <!-- ฝั่งขวา -->
+          <div class="right-section">
+            <!-- Terminal Container -->
+            <div
+              id="terminal"
+              class="w-[600px] h-[400px] bg-black rounded-xl shadow-2xl overflow-hidden relative"
+            >
+              <!-- Terminal Header (Drag Area) -->
+              <div
+                id="terminal-header"
+                class="bg-gray-800 text-white px-4 py-2 cursor-move flex justify-between items-center"
+              >
+                <span>💻 Terminal</span>
+                <button
+                  id="close-btn"
+                  class="bg-red-500 hover:bg-red-700 text-white px-2 py-1 rounded-full w-4 h-4 flex items-center justify-center text-xs text-shadow"
+                >
+                  &times;
+                </button>
+              </div>
+
+              <!-- Terminal Output -->
+              <div
+                id="output"
+                class="h-[300px] p-4 text-green-400 overflow-y-auto text-sm font-mono"
+              >
+                <div class="output-line">
+                  Welcome to the Draggable Terminal! Type 'help' for commands.
+                </div>
+              </div>
+
+              <!-- Terminal Input -->
+              <div class="bg-gray-900 p-2 flex items-center">
+                <span class="text-green-400">user@terminal:~$</span>
+                <input
+                  id="input"
+                  type="text"
+                  class="bg-transparent text-white outline-none ml-2 flex-1"
+                  autofocus
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="windowContainer" class="relative w-full h-full"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
