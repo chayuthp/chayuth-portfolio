@@ -35,13 +35,20 @@ function createPopup(id, position = null) {
   }
 
   modal.innerHTML = `
-                <div id="dragBar-${id}" class="cursor-move bg-gray-800 text-white p-2 rounded-t-lg flex justify-between">
-                    🟦 ${id}
-                    <div>
-                        <button onclick="toggleMaximize('${id}')" class="px-2 bg-yellow-500 rounded-full hover:bg-yellow-700">⬜</button>
-                        <button onclick="closeWindow('${id}')" class="px-2 bg-red-500 rounded-full hover:bg-red-700">&times;</button>
-                    </div>
-                </div>
+    <div id="dragBar-${id}" class="cursor-move flex items-center bg-gray-800 p-3 shadow-md">
+        <div class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center cursor-pointer mr-3">
+            <span class="text-gray-300 text-xl">☰</span>
+        </div>
+        <div class="flex-grow text-gray-300 text-start bg-gray-900 p-2 rounded-full">
+            https://www.example.com
+        </div>
+        <div class="p-2">
+            <div>
+                <button onclick="toggleMaximize('${id}')" class="w-6 h-6 px-2 bg-yellow-500 rounded-full hover:bg-yellow-700"></button>
+                <button onclick="closeWindow('${id}')" class="w-6 h-6 px-2 bg-red-500 rounded-full hover:bg-red-700 text-white"></button>
+            </div>
+        </div>
+    </div>
                 <div id="modalContent-${id}" class="p-4">
                     <p>นี่คือหน้าต่าง ${id} 🎉</p>
                 </div>
@@ -234,8 +241,43 @@ function processCommand(command) {
   switch (command.toLowerCase()) {
     case "help":
       response.innerHTML =
-        "Available commands: <br> - <b>help</b>: Show available commands <br> - <b>clear</b>: Clear terminal";
+        "Available commands: <br> - <b>help</b>: Show available commands <br> - <b>clear</b>: Clear terminal <br> - <b>about</b>: About me <br> - <b>portfolio</b>: Open file portfolio <br> - <b>project</b>: Open file project";
       break;
+    case "about":
+      response.innerHTML = `👋 Hi, I'm Chayuth Pinphat – a passionate Full-Stack Developer with expertise in building responsive and dynamic web applications. 💻
+                    <br>
+                    <strong>Frontend Skills 🌐</strong>
+                    <br>
+                    HTML, CSS, JavaScript, TypeScript ✨
+                    <br>
+                    React.js, Next.js 🚀
+                    <br>
+                    TailwindCSS, Bootstrap 🎨
+                    <br>
+                    <strong>Backend Skills ⚙️</strong>
+                    <br>
+                    Express.js, Restful API 🔧
+                    <br>
+                    <strong>Database 🗃️</strong>
+                    <br>
+                    SQL Server, MongoDB 🗄️
+                    <br>
+                    <strong>Tools 🛠️</strong>
+                    <br>
+                    Figma for design 🎨
+                    <br>
+                    Git/GitLab for version control ⬇️
+                    <br>
+                    I'm committed to creating high-quality, user-friendly solutions, from concept to deployment. Let's collaborate and build something amazing! 🌟
+                    <br><br>
+                    Type 'help' for commands.`;
+      break;
+      case "portfolio":
+        createPopup("popup1");
+        break;
+        case "project":
+          createPopup("popup2");
+          break;
     case "clear":
       output.innerHTML = "";
       return;
@@ -245,45 +287,68 @@ function processCommand(command) {
   output.appendChild(response);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const interBubble = document.querySelector('.interactive');
+document.addEventListener("DOMContentLoaded", () => {
+  const interBubble = document.querySelector(".interactive");
   let curX = 0;
   let curY = 0;
   let tgX = 0;
   let tgY = 0;
 
   function move() {
-      curX += (tgX - curX) / 20;
-      curY += (tgY - curY) / 20;
-      interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
-      requestAnimationFrame(() => {
-          move();
-      });
+    curX += (tgX - curX) / 20;
+    curY += (tgY - curY) / 20;
+    interBubble.style.transform = `translate(${Math.round(
+      curX
+    )}px, ${Math.round(curY)}px)`;
+    requestAnimationFrame(() => {
+      move();
+    });
   }
 
-  window.addEventListener('mousemove', (event) => {
-      tgX = event.clientX;
-      tgY = event.clientY;
+  window.addEventListener("mousemove", (event) => {
+    tgX = event.clientX;
+    tgY = event.clientY;
   });
 
   move();
 });
 
 // Create a Typewriter instance for typing and deleting effect
-const typewriter = new Typewriter('.text-container', {
+const typewriter = new Typewriter(".text-container", {
   loop: true, // Make it loop continuously
-  delay: 75,  // Typing speed
+  delay: 75, // Typing speed
   deleteSpeed: 50, // Deleting speed
 });
 
 // Add the first text
-typewriter.typeString('Hello 👋')
-  .pauseFor(3000)  // Pause for 1 second before deleting
-  .deleteAll()  // Delete all text
-  .pauseFor(1000)  // Pause before typing the next text
+typewriter
+  .typeString("Hello 👋")
+  .pauseFor(3000) // Pause for 1 second before deleting
+  .deleteAll() // Delete all text
+  .pauseFor(1000) // Pause before typing the next text
 
   // Add the second text
-  .typeString('CHAYUTH')
+  .typeString("CHAYUTH")
   .pauseFor(3000)
   .deleteAll()
-  .start();  // Start the typing animation
+  .start(); // Start the typing animation
+
+  //tooltips
+  document.addEventListener("DOMContentLoaded", function () {
+    const toast = document.getElementById("toast");
+    const closeToast = document.getElementById("close-toast");
+
+    // Show toast with animation
+    setTimeout(() => {
+      toast.classList.remove("opacity-0");
+      toast.classList.add("opacity-100");
+    }, 1000);
+
+    // Close toast on button click
+    closeToast.addEventListener("click", () => {
+      toast.classList.add("opacity-0");
+      setTimeout(() => {
+        toast.remove();
+      }, 300);
+    });
+  });

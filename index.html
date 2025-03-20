@@ -3,21 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CHAYUTH PORTFOLIO</title>
+    <title>CLONE WINDOW</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/typewriter-effect@2.18.0/dist/core.js"></script>
     <style type="text/tailwindcss">
-      /* @theme {
+      @theme {
         --color-headColor: #0f0f12;
         --color-bodyColor: #0f0f12;
         --color-textBigColor: #cccccc;
 
         --text-bigText: 100px;
-      } */
+      }
     </style>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="flex flex-col min-h-screen space-y-4 p-4 gradient-bg">
     <!-- bg-[url(windows11bg.jpg)] bg รูป -->
     <!-- bg-[url(bg1.png)] bg รูป -->
     <!-- container  bg สีดำ -->
@@ -92,7 +92,7 @@
             <!-- Terminal Container -->
             <div
               id="terminal"
-              class="w-[600px] h-[400px] bg-black rounded-xl shadow-2xl overflow-hidden relative"
+              class="w-[600px] h-[460px] bg-black rounded-xl shadow-2xl overflow-hidden relative"
             >
               <!-- Terminal Header (Drag Area) -->
               <div
@@ -111,10 +111,38 @@
               <!-- Terminal Output -->
               <div
                 id="output"
-                class="h-[300px] p-4 text-green-400 overflow-y-auto text-sm font-mono"
+                class="h-[380px] p-4 text-green-400 overflow-y-auto text-sm font-mono"
               >
                 <div class="output-line">
-                  Welcome to the Draggable Terminal! Type 'help' for commands.
+                  <div class="mb-4">
+                    👋 Hi, I'm Chayuth Pinphat – a passionate Full-Stack Developer with expertise in building responsive and dynamic web applications. 💻
+                    <br>
+                    <strong>Frontend Skills 🌐</strong>
+                    <br>
+                    HTML, CSS, JavaScript, TypeScript ✨
+                    <br>
+                    React.js, Next.js 🚀
+                    <br>
+                    TailwindCSS, Bootstrap 🎨
+                    <br>
+                    <strong>Backend Skills ⚙️</strong>
+                    <br>
+                    Express.js, Restful API 🔧
+                    <br>
+                    <strong>Database 🗃️</strong>
+                    <br>
+                    SQL Server, MongoDB 🗄️
+                    <br>
+                    <strong>Tools 🛠️</strong>
+                    <br>
+                    Figma for design 🎨
+                    <br>
+                    Git/GitLab for version control ⬇️
+                    <br>
+                    I'm committed to creating high-quality, user-friendly solutions, from concept to deployment. Let's collaborate and build something amazing! 🌟
+                    <br><br>
+                    Type 'help' for commands.
+                  </div>
                 </div>
               </div>
 
@@ -129,6 +157,23 @@
                 />
               </div>
             </div>
+            <!-- Toast Notification -->
+            <div
+              id="toast"
+              class="fixed bottom-4 right-4 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-lg flex items-center space-x-2 transition-opacity duration-300 opacity-0"
+            >
+                <span class="neon-lamp">💡</span>
+              <span>Did you know?: Mobile version coming soon!</span>
+              <button
+                id="close-toast"
+                class="bg-red-500 hover:bg-red-700 text-white px-2 py-1 rounded-full w-4 h-4 flex items-center justify-center text-xs"
+              >
+                &times;
+              </button>
+            </div>
+
+
+            <!-- end right section -->
           </div>
         </div>
 
