@@ -16,7 +16,7 @@ function createPopup(id, position = null) {
   const modal = document.createElement("div");
   modal.id = id;
   modal.className =
-    "fixed grid-snap w-[900px] h-[700px] bg-white rounded-lg shadow-lg border resizable popup";
+    "fixed grid-snap bg-white rounded-lg shadow-lg border resizable popup w-[95vw] h-[80vh] md:w-[900px] md:h-[700px] flex flex-col";
   modal.style.zIndex = 1000;
 
   // ถ้าไม่มีตำแหน่งที่ส่งเข้ามา ใช้ตำแหน่งที่คำนวณใหม่
@@ -35,12 +35,12 @@ function createPopup(id, position = null) {
   }
 
   modal.innerHTML = `
-    <div id="dragBar-${id}" class="cursor-move flex items-center bg-gray-800 p-3 shadow-md">
+    <div id="dragBar-${id}" class="cursor-move flex items-center bg-gray-800 p-2 md:p-3 shadow-md text-sm md:text-base">
         <div class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center cursor-pointer mr-3">
             <span class="text-gray-300 text-xl">☰</span>
         </div>
         <div class="flex-grow text-gray-300 text-start bg-gray-900 p-2 rounded-full">
-            https://www.example.com
+            Chayuth-Project
         </div>
         <div class="p-2">
             <div>
@@ -49,38 +49,38 @@ function createPopup(id, position = null) {
             </div>
         </div>
     </div>
-<div id="modalContent" class="p-6">
+<div id="modalContent" class="p-4 md:p-6 flex-1 overflow-auto bg-gray-900">
       <h1 class="text-2xl font-bold text-white mb-6">My Projects</h1>
 
       <!-- Grid Layout -->
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         <!-- Card Template (1) -->
         <div
           class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
         >
           <img
-            class="w-full h-48 object-cover"
-            src="https://picsum.photos/600/400?random=1"
+            class="w-full h-40 md:h-48 object-cover"
+            src="cloneSpotify.png"
             alt="Project Preview"
           />
 
           <div class="p-5">
-            <h3 class="text-xl font-semibold text-white">Project 1</h3>
+            <h3 class="text-xl font-semibold text-white">Clone Spotify</h3>
             <p class="text-gray-400 text-sm mt-2">รายละเอียดโปรเจกต์ 🎉</p>
 
             <!-- Tech Pills -->
             <div class="flex flex-wrap gap-2 mt-3">
               <span
                 class="px-3 py-1 bg-blue-600 text-white text-xs rounded-full font-medium"
-                >React</span
+                >HTML</span
               >
               <span
                 class="px-3 py-1 bg-green-600 text-white text-xs rounded-full font-medium"
-                >Node.js</span
+                >CSS/Tailwind</span
               >
               <span
                 class="px-3 py-1 bg-yellow-500 text-white text-xs rounded-full font-medium"
-                >MongoDB</span
+                >JavaScript</span
               >
             </div>
 
@@ -101,28 +101,28 @@ function createPopup(id, position = null) {
           class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
         >
           <img
-            class="w-full h-48 object-cover"
-            src="https://picsum.photos/600/400?random=1"
+            class="w-full h-40 md:h-48 object-cover"
+            src="cloneRandomWeb.png"
             alt="Project Preview"
           />
 
           <div class="p-5">
-            <h3 class="text-xl font-semibold text-white">Project 1</h3>
+            <h3 class="text-xl font-semibold text-white">Clone Random Web</h3>
             <p class="text-gray-400 text-sm mt-2">รายละเอียดโปรเจกต์ 🎉</p>
 
             <!-- Tech Pills -->
             <div class="flex flex-wrap gap-2 mt-3">
               <span
                 class="px-3 py-1 bg-blue-600 text-white text-xs rounded-full font-medium"
-                >React</span
+                >HTML</span
               >
               <span
                 class="px-3 py-1 bg-green-600 text-white text-xs rounded-full font-medium"
-                >Node.js</span
+                >CSS/Tailwind</span
               >
               <span
                 class="px-3 py-1 bg-yellow-500 text-white text-xs rounded-full font-medium"
-                >MongoDB</span
+                >JavaScript</span
               >
             </div>
 
@@ -143,28 +143,28 @@ function createPopup(id, position = null) {
           class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
         >
           <img
-            class="w-full h-48 object-cover"
-            src="https://picsum.photos/600/400?random=1"
+            class="w-full h-40 md:h-48 object-cover"
+            src="dynamicSortProject.png"
             alt="Project Preview"
           />
 
           <div class="p-5">
-            <h3 class="text-xl font-semibold text-white">Project 1</h3>
+            <h3 class="text-xl font-semibold text-white">Dynamic Sort Project</h3>
             <p class="text-gray-400 text-sm mt-2">รายละเอียดโปรเจกต์ 🎉</p>
 
             <!-- Tech Pills -->
             <div class="flex flex-wrap gap-2 mt-3">
               <span
                 class="px-3 py-1 bg-blue-600 text-white text-xs rounded-full font-medium"
-                >React</span
+                >HTML</span
               >
               <span
                 class="px-3 py-1 bg-green-600 text-white text-xs rounded-full font-medium"
-                >Node.js</span
+                >CSS/Tailwind</span
               >
               <span
                 class="px-3 py-1 bg-yellow-500 text-white text-xs rounded-full font-medium"
-                >MongoDB</span
+                >JavaScript</span
               >
             </div>
 
@@ -185,28 +185,28 @@ function createPopup(id, position = null) {
           class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
         >
           <img
-            class="w-full h-48 object-cover"
-            src="https://picsum.photos/600/400?random=1"
+            class="w-full h-40 md:h-48 object-cover"
+            src="pokePic.png"
             alt="Project Preview"
           />
 
           <div class="p-5">
-            <h3 class="text-xl font-semibold text-white">Project 1</h3>
+            <h3 class="text-xl font-semibold text-white">PokePic</h3>
             <p class="text-gray-400 text-sm mt-2">รายละเอียดโปรเจกต์ 🎉</p>
 
             <!-- Tech Pills -->
             <div class="flex flex-wrap gap-2 mt-3">
               <span
                 class="px-3 py-1 bg-blue-600 text-white text-xs rounded-full font-medium"
-                >React</span
+                >HTML</span
               >
               <span
                 class="px-3 py-1 bg-green-600 text-white text-xs rounded-full font-medium"
-                >Node.js</span
+                >CSS/Tailwind</span
               >
               <span
                 class="px-3 py-1 bg-yellow-500 text-white text-xs rounded-full font-medium"
-                >MongoDB</span
+                >JavaScript</span
               >
             </div>
 
@@ -227,28 +227,28 @@ function createPopup(id, position = null) {
           class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
         >
           <img
-            class="w-full h-48 object-cover"
-            src="https://picsum.photos/600/400?random=1"
+            class="w-full h-40 md:h-48 object-cover"
+            src="kanbanBoardToDo.png"
             alt="Project Preview"
           />
 
           <div class="p-5">
-            <h3 class="text-xl font-semibold text-white">Project 1</h3>
+            <h3 class="text-xl font-semibold text-white">Kanban Board To Do</h3>
             <p class="text-gray-400 text-sm mt-2">รายละเอียดโปรเจกต์ 🎉</p>
 
             <!-- Tech Pills -->
             <div class="flex flex-wrap gap-2 mt-3">
               <span
                 class="px-3 py-1 bg-blue-600 text-white text-xs rounded-full font-medium"
-                >React</span
+                >HTML</span
               >
               <span
                 class="px-3 py-1 bg-green-600 text-white text-xs rounded-full font-medium"
-                >Node.js</span
+                >CSS/Tailwind</span
               >
               <span
                 class="px-3 py-1 bg-yellow-500 text-white text-xs rounded-full font-medium"
-                >MongoDB</span
+                >JavaScript</span
               >
             </div>
 
@@ -269,7 +269,7 @@ function createPopup(id, position = null) {
           class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
         >
           <img
-            class="w-full h-48 object-cover"
+            class="w-full h-40 md:h-48 object-cover"
             src="https://picsum.photos/600/400?random=1"
             alt="Project Preview"
           />
@@ -311,6 +311,11 @@ function createPopup(id, position = null) {
             `;
 
   document.getElementById("windowContainer").appendChild(modal);
+  // Ensure mobile starts in view
+  if (!position && window.innerWidth < 768) {
+    modal.style.left = "10px";
+    modal.style.top = "10px";
+  }
   makeDraggable(id);
   windows[id] = { modal, maximized: false };
 }
@@ -407,12 +412,75 @@ document
   .addEventListener("click", () => createPopup("popup1"));
 document
   .getElementById("openModal2")
-  .addEventListener("click", () => createPopup("popup2"));
+  .addEventListener("click", () => createPopupResume("popup2"));
 document
   .getElementById("openModal3")
   .addEventListener("click", () => showTerminal());
 
 // THIS CODE UNDER HERE FOR TERMINAL
+
+function createPopupResume(id, position = null) {
+  if (windows[id]) return; // เปิดได้แค่หนึ่งแท็บต่อปุ่ม
+  console.log("id-popup= ", id);
+
+  const modal = document.createElement("div");
+  modal.id = id;
+  modal.className =
+    "fixed grid-snap bg-white rounded-lg shadow-lg border resizable popup w-[95vw] h-[80vh] md:w-[900px] md:h-[700px] flex flex-col";
+  modal.style.zIndex = 1000;
+
+  // ถ้าไม่มีตำแหน่งที่ส่งเข้ามา ใช้ตำแหน่งที่คำนวณใหม่
+  if (position) {
+    modal.style.left = `${position.left}px`;
+    modal.style.top = `${position.top}px`;
+    modal.style.width = `${position.width}px`;
+    modal.style.height = `${position.height}px`;
+  } else {
+    modal.style.left = `${lastPopupPosition.left}px`;
+    modal.style.top = `${lastPopupPosition.top}px`;
+
+    // คำนวณตำแหน่งของป๊อปอัพถัดไป
+    lastPopupPosition.left += 30; // เพิ่มระยะห่างในแนวนอน
+    lastPopupPosition.top += 30; // เพิ่มระยะห่างในแนวตั้ง
+  }
+
+  modal.innerHTML = `
+    <div id="dragBar-${id}" class="cursor-move flex items-center bg-gray-800 p-2 md:p-3 shadow-md text-sm md:text-base">
+        <div class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center cursor-pointer mr-3">
+            <span class="text-gray-300 text-xl">☰</span>
+        </div>
+        <div class="flex-grow text-gray-300 text-start bg-gray-900 p-2 rounded-full">
+            Chauyuth_CV.pdf
+        </div>
+        <div class="p-2">
+            <div>
+                <button onclick="toggleMaximize('${id}')" class="w-6 h-6 px-2 bg-yellow-500 rounded-full hover:bg-yellow-700"></button>
+                <button onclick="closeWindow('${id}')" class="w-6 h-6 px-2 bg-red-500 rounded-full hover:bg-red-700 text-white"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-0 flex-1 overflow-auto bg-white">
+      <div class="flex items-center justify-between px-3 md:px-4 py-2 bg-gray-100 border-b">
+        <h2 class="text-gray-700 font-medium">Resume / CV</h2>
+        <div class="space-x-2 text-xs md:text-sm">
+          <a href="Chauyuth_CV.pdf" target="_blank" class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-full">Open in new tab</a>
+          <a href="Chauyuth_CV.pdf" download class="px-3 py-1 bg-green-600 hover:bg-green-700 text-white rounded-full">Download</a>
+        </div>
+      </div>
+      <iframe src="Chauyuth_CV.pdf" class="w-full h-[70vh] md:h-[600px]" title="Chayuth Resume"></iframe>
+    </div>
+            `;
+
+  document.getElementById("windowContainer").appendChild(modal);
+  // Ensure mobile starts in view
+  if (!position && window.innerWidth < 768) {
+    modal.style.left = "10px";
+    modal.style.top = "10px";
+  }
+  makeDraggable(id);
+  windows[id] = { modal, maximized: false };
+}
 
 function showTerminal() {
   terminal.classList.remove("hidden");
@@ -497,7 +565,7 @@ function processCommand(command) {
   switch (command.toLowerCase()) {
     case "help":
       response.innerHTML =
-        "Available commands: <br> - <b>help</b>: Show available commands <br> - <b>clear</b>: Clear terminal <br> - <b>about</b>: About me <br> - <b>portfolio</b>: Open file portfolio <br> - <b>project</b>: Open file project";
+        "Available commands: <br> - <b>help</b>: Show available commands <br> - <b>clear</b>: Clear terminal <br> - <b>about</b>: About me <br> - <b>Project</b>: Open file Project <br> - <b>resume</b>: Open file Resume";
       break;
     case "about":
       response.innerHTML = `👋 Hi, I'm Chayuth — Full‑Stack Developer. 💻
@@ -524,12 +592,12 @@ function processCommand(command) {
                     <br><br>
                     Type 'help' for commands.`;
       break;
-      case "portfolio":
-        createPopup("popup1");
-        break;
-        case "project":
-          createPopup("popup2");
-          break;
+    case "project":
+      createPopup("popup1");
+      break;
+    case "resume":
+      createPopupResume("popup2");
+      break;
     case "clear":
       output.innerHTML = "";
       return;
@@ -585,22 +653,22 @@ typewriter
   .deleteAll()
   .start(); // Start the typing animation
 
-  //tooltips
-  document.addEventListener("DOMContentLoaded", function () {
-    const toast = document.getElementById("toast");
-    const closeToast = document.getElementById("close-toast");
+//tooltips
+document.addEventListener("DOMContentLoaded", function () {
+  const toast = document.getElementById("toast");
+  const closeToast = document.getElementById("close-toast");
 
-    // Show toast with animation
+  // Show toast with animation
+  setTimeout(() => {
+    toast.classList.remove("opacity-0");
+    toast.classList.add("opacity-100");
+  }, 1000);
+
+  // Close toast on button click
+  closeToast.addEventListener("click", () => {
+    toast.classList.add("opacity-0");
     setTimeout(() => {
-      toast.classList.remove("opacity-0");
-      toast.classList.add("opacity-100");
-    }, 1000);
-
-    // Close toast on button click
-    closeToast.addEventListener("click", () => {
-      toast.classList.add("opacity-0");
-      setTimeout(() => {
-        toast.remove();
-      }, 300);
-    });
+      toast.remove();
+    }, 300);
   });
+});

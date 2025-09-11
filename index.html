@@ -53,16 +53,16 @@
           <div class="g5"></div>
           <div class="interactive"></div>
         </div>
-        <div class="flex justify-between p-4 z-50 absolute inset-0">
+        <div class="flex flex-col md:flex-row justify-between gap-4 p-4 z-50 absolute inset-0 overflow-y-auto">
           <!-- ฝั่งซ้าย -->
-          <div class="space-x-4">
+          <div class="flex flex-row md:flex-col gap-4">
             <div class="img-chrome1">
               <div
                 class="icon-main hover:bg-blue-200 w-30 h-30 flex flex-col items-center cursor-pointer"
                 id="openModal1"
               >
-                <img src="ggchrome.png" alt="" class="w-20 h-20" />
-                <h1 class="text-sm text-white text-shadow">google chrome</h1>
+                <img src="ggchrome.png" alt="" class="w-16 h-16 md:w-20 md:h-20" />
+                <h1 class="text-sm text-white text-shadow">Project</h1>
               </div>
             </div>
 
@@ -71,8 +71,8 @@
                 class="icon-main hover:bg-blue-200 w-30 h-30 flex flex-col items-center cursor-pointer"
                 id="openModal2"
               >
-                <img src="ggchrome.png" alt="" class="w-20 h-20" />
-                <h1 class="text-sm text-white text-shadow">google chrome</h1>
+                <img src="ggchrome.png" alt="" class="w-16 h-16 md:w-20 md:h-20" />
+                <h1 class="text-sm text-white text-shadow">Resume/CV</h1>
               </div>
             </div>
 
@@ -81,7 +81,7 @@
                 class="icon-main hover:bg-blue-200 w-30 h-30 flex flex-col items-center cursor-pointer"
                 id="openModal3"
               >
-                <img src="terminalicon2.png" alt="" class="w-20 h-20" />
+                <img src="terminalicon2.png" alt="" class="w-16 h-16 md:w-20 md:h-20" />
                 <h1 class="text-sm text-white text-shadow">terminal</h1>
               </div>
             </div>
@@ -92,7 +92,7 @@
             <!-- Terminal Container -->
             <div
               id="terminal"
-              class="w-[600px] h-[460px] bg-black rounded-xl shadow-2xl overflow-hidden relative"
+              class="w-full md:w-[600px] h-[360px] md:h-[460px] bg-black rounded-xl shadow-2xl overflow-hidden relative"
             >
               <!-- Terminal Header (Drag Area) -->
               <div
@@ -111,7 +111,7 @@
               <!-- Terminal Output -->
               <div
                 id="output"
-                class="h-[380px] p-4 text-green-400 overflow-y-auto text-sm font-mono"
+                class="h-[280px] md:h-[380px] p-4 text-green-400 overflow-y-auto text-sm font-mono"
               >
                 <div class="output-line">
                   <div class="mb-4">
