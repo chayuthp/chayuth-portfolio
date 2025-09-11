@@ -49,9 +49,265 @@ function createPopup(id, position = null) {
             </div>
         </div>
     </div>
-                <div id="modalContent-${id}" class="p-4">
-                    <p>นี่คือหน้าต่าง ${id} 🎉</p>
-                </div>
+<div id="modalContent" class="p-6">
+      <h1 class="text-2xl font-bold text-white mb-6">My Projects</h1>
+
+      <!-- Grid Layout -->
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Card Template (1) -->
+        <div
+          class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+        >
+          <img
+            class="w-full h-48 object-cover"
+            src="https://picsum.photos/600/400?random=1"
+            alt="Project Preview"
+          />
+
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-white">Project 1</h3>
+            <p class="text-gray-400 text-sm mt-2">รายละเอียดโปรเจกต์ 🎉</p>
+
+            <!-- Tech Pills -->
+            <div class="flex flex-wrap gap-2 mt-3">
+              <span
+                class="px-3 py-1 bg-blue-600 text-white text-xs rounded-full font-medium"
+                >React</span
+              >
+              <span
+                class="px-3 py-1 bg-green-600 text-white text-xs rounded-full font-medium"
+                >Node.js</span
+              >
+              <span
+                class="px-3 py-1 bg-yellow-500 text-white text-xs rounded-full font-medium"
+                >MongoDB</span
+              >
+            </div>
+
+            <div class="flex justify-end mt-4">
+              <a
+                href="https://www.example.com"
+                target="_blank"
+                class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm transition-colors"
+              >
+                View
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Template (2) -->
+        <div
+          class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+        >
+          <img
+            class="w-full h-48 object-cover"
+            src="https://picsum.photos/600/400?random=1"
+            alt="Project Preview"
+          />
+
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-white">Project 1</h3>
+            <p class="text-gray-400 text-sm mt-2">รายละเอียดโปรเจกต์ 🎉</p>
+
+            <!-- Tech Pills -->
+            <div class="flex flex-wrap gap-2 mt-3">
+              <span
+                class="px-3 py-1 bg-blue-600 text-white text-xs rounded-full font-medium"
+                >React</span
+              >
+              <span
+                class="px-3 py-1 bg-green-600 text-white text-xs rounded-full font-medium"
+                >Node.js</span
+              >
+              <span
+                class="px-3 py-1 bg-yellow-500 text-white text-xs rounded-full font-medium"
+                >MongoDB</span
+              >
+            </div>
+
+            <div class="flex justify-end mt-4">
+              <a
+                href="https://www.example.com"
+                target="_blank"
+                class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm transition-colors"
+              >
+                View
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Template (3) -->
+        <div
+          class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+        >
+          <img
+            class="w-full h-48 object-cover"
+            src="https://picsum.photos/600/400?random=1"
+            alt="Project Preview"
+          />
+
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-white">Project 1</h3>
+            <p class="text-gray-400 text-sm mt-2">รายละเอียดโปรเจกต์ 🎉</p>
+
+            <!-- Tech Pills -->
+            <div class="flex flex-wrap gap-2 mt-3">
+              <span
+                class="px-3 py-1 bg-blue-600 text-white text-xs rounded-full font-medium"
+                >React</span
+              >
+              <span
+                class="px-3 py-1 bg-green-600 text-white text-xs rounded-full font-medium"
+                >Node.js</span
+              >
+              <span
+                class="px-3 py-1 bg-yellow-500 text-white text-xs rounded-full font-medium"
+                >MongoDB</span
+              >
+            </div>
+
+            <div class="flex justify-end mt-4">
+              <a
+                href="https://www.example.com"
+                target="_blank"
+                class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm transition-colors"
+              >
+                View
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Template (4) -->
+        <div
+          class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+        >
+          <img
+            class="w-full h-48 object-cover"
+            src="https://picsum.photos/600/400?random=1"
+            alt="Project Preview"
+          />
+
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-white">Project 1</h3>
+            <p class="text-gray-400 text-sm mt-2">รายละเอียดโปรเจกต์ 🎉</p>
+
+            <!-- Tech Pills -->
+            <div class="flex flex-wrap gap-2 mt-3">
+              <span
+                class="px-3 py-1 bg-blue-600 text-white text-xs rounded-full font-medium"
+                >React</span
+              >
+              <span
+                class="px-3 py-1 bg-green-600 text-white text-xs rounded-full font-medium"
+                >Node.js</span
+              >
+              <span
+                class="px-3 py-1 bg-yellow-500 text-white text-xs rounded-full font-medium"
+                >MongoDB</span
+              >
+            </div>
+
+            <div class="flex justify-end mt-4">
+              <a
+                href="https://www.example.com"
+                target="_blank"
+                class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm transition-colors"
+              >
+                View
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Template (5) -->
+        <div
+          class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+        >
+          <img
+            class="w-full h-48 object-cover"
+            src="https://picsum.photos/600/400?random=1"
+            alt="Project Preview"
+          />
+
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-white">Project 1</h3>
+            <p class="text-gray-400 text-sm mt-2">รายละเอียดโปรเจกต์ 🎉</p>
+
+            <!-- Tech Pills -->
+            <div class="flex flex-wrap gap-2 mt-3">
+              <span
+                class="px-3 py-1 bg-blue-600 text-white text-xs rounded-full font-medium"
+                >React</span
+              >
+              <span
+                class="px-3 py-1 bg-green-600 text-white text-xs rounded-full font-medium"
+                >Node.js</span
+              >
+              <span
+                class="px-3 py-1 bg-yellow-500 text-white text-xs rounded-full font-medium"
+                >MongoDB</span
+              >
+            </div>
+
+            <div class="flex justify-end mt-4">
+              <a
+                href="https://www.example.com"
+                target="_blank"
+                class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm transition-colors"
+              >
+                View
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Template (6) -->
+        <div
+          class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+        >
+          <img
+            class="w-full h-48 object-cover"
+            src="https://picsum.photos/600/400?random=1"
+            alt="Project Preview"
+          />
+
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-white">Project 1</h3>
+            <p class="text-gray-400 text-sm mt-2">รายละเอียดโปรเจกต์ 🎉</p>
+
+            <!-- Tech Pills -->
+            <div class="flex flex-wrap gap-2 mt-3">
+              <span
+                class="px-3 py-1 bg-blue-600 text-white text-xs rounded-full font-medium"
+                >React</span
+              >
+              <span
+                class="px-3 py-1 bg-green-600 text-white text-xs rounded-full font-medium"
+                >Node.js</span
+              >
+              <span
+                class="px-3 py-1 bg-yellow-500 text-white text-xs rounded-full font-medium"
+                >MongoDB</span
+              >
+            </div>
+
+            <div class="flex justify-end mt-4">
+              <a
+                href="https://www.example.com"
+                target="_blank"
+                class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm transition-colors"
+              >
+                View
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- end -->
+      </div>
+    </div>
             `;
 
   document.getElementById("windowContainer").appendChild(modal);
@@ -244,31 +500,27 @@ function processCommand(command) {
         "Available commands: <br> - <b>help</b>: Show available commands <br> - <b>clear</b>: Clear terminal <br> - <b>about</b>: About me <br> - <b>portfolio</b>: Open file portfolio <br> - <b>project</b>: Open file project";
       break;
     case "about":
-      response.innerHTML = `👋 Hi, I'm Chayuth Pinphat – a passionate Full-Stack Developer with expertise in building responsive and dynamic web applications. 💻
+      response.innerHTML = `👋 Hi, I'm Chayuth — Full‑Stack Developer. 💻
                     <br>
-                    <strong>Frontend Skills 🌐</strong>
+                    <strong>Frontend 🌐</strong>
                     <br>
-                    HTML, CSS, JavaScript, TypeScript ✨
+                    HTML, CSS, JavaScript/TypeScript, React, Next.js, Tailwind, Bootstrap
                     <br>
-                    React.js, Next.js 🚀
+                    <strong>Backend ⚙️</strong>
                     <br>
-                    TailwindCSS, Bootstrap 🎨
-                    <br>
-                    <strong>Backend Skills ⚙️</strong>
-                    <br>
-                    Express.js, Restful API 🔧
+                    Node.js/Express, REST API
                     <br>
                     <strong>Database 🗃️</strong>
                     <br>
-                    SQL Server, MongoDB 🗄️
+                    SQL Server, MongoDB
                     <br>
                     <strong>Tools 🛠️</strong>
                     <br>
-                    Figma for design 🎨
+                    Git/GitLab, Figma
                     <br>
-                    Git/GitLab for version control ⬇️
+                    <strong>Focus 🎯</strong>
                     <br>
-                    I'm committed to creating high-quality, user-friendly solutions, from concept to deployment. Let's collaborate and build something amazing! 🌟
+                    Responsive, dynamic apps — end‑to‑end delivery
                     <br><br>
                     Type 'help' for commands.`;
       break;
