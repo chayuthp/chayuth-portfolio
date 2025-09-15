@@ -86,7 +86,7 @@ function createPopup(id, position = null) {
 
             <div class="flex justify-end mt-4">
               <a
-                href="https://www.example.com"
+                href="https://chayuthp.github.io/cloneSpotify/"
                 target="_blank"
                 class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm transition-colors"
               >
@@ -128,7 +128,7 @@ function createPopup(id, position = null) {
 
             <div class="flex justify-end mt-4">
               <a
-                href="https://www.example.com"
+                href="https://chayuthp.github.io/cloneRandom1/"
                 target="_blank"
                 class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm transition-colors"
               >
@@ -170,7 +170,7 @@ function createPopup(id, position = null) {
 
             <div class="flex justify-end mt-4">
               <a
-                href="https://www.example.com"
+                href="https://chayuthp.github.io/dynamicSort/"
                 target="_blank"
                 class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm transition-colors"
               >
@@ -212,7 +212,7 @@ function createPopup(id, position = null) {
 
             <div class="flex justify-end mt-4">
               <a
-                href="https://www.example.com"
+                href="https://chayuthp.github.io/pokeTest/"
                 target="_blank"
                 class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm transition-colors"
               >
@@ -254,7 +254,7 @@ function createPopup(id, position = null) {
 
             <div class="flex justify-end mt-4">
               <a
-                href="https://www.example.com"
+                href="https://chayuthp.github.io/kanban/"
                 target="_blank"
                 class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm transition-colors"
               >
