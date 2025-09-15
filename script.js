@@ -60,34 +60,35 @@ function createPopup(id, position = null) {
         >
           <img
             class="w-full h-40 md:h-48 object-cover"
-            src="cloneSpotify.png"
+            src="next1.png"
             alt="Project Preview"
           />
 
           <div class="p-5">
-            <h3 class="text-xl font-semibold text-white">Clone Spotify</h3>
+            <h3 class="text-xl font-semibold text-white">Authentication FACEBOOK+LINE</h3>
             <p class="text-gray-400 text-sm mt-2">รายละเอียดโปรเจกต์ 🎉</p>
 
             <!-- Tech Pills -->
             <div class="flex flex-wrap gap-2 mt-3">
               <span
                 class="px-3 py-1 bg-blue-600 text-white text-xs rounded-full font-medium"
-                >HTML</span
+                >Html</span
               >
               <span
                 class="px-3 py-1 bg-green-600 text-white text-xs rounded-full font-medium"
-                >CSS/Tailwind</span
+                >Css/Tailwind</span
               >
               <span
                 class="px-3 py-1 bg-yellow-500 text-white text-xs rounded-full font-medium"
-                >JavaScript</span
+                >Next.js</span
               >
             </div>
 
             <div class="flex justify-end mt-4">
               <a
-                href="https://chayuthp.github.io/cloneSpotify/"
+                href="#"
                 target="_blank"
+                onclick="event.preventDefault(); alert('Web deploy coming soon');"
                 class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm transition-colors"
               >
                 View
@@ -95,6 +96,8 @@ function createPopup(id, position = null) {
             </div>
           </div>
         </div>
+
+        
 
         <!-- Card Template (2) -->
         <div
@@ -270,33 +273,33 @@ function createPopup(id, position = null) {
         >
           <img
             class="w-full h-40 md:h-48 object-cover"
-            src="https://picsum.photos/600/400?random=1"
+            src="cloneSpotify.png"
             alt="Project Preview"
           />
 
           <div class="p-5">
-            <h3 class="text-xl font-semibold text-white">Project 1</h3>
+            <h3 class="text-xl font-semibold text-white">Clone Spotify</h3>
             <p class="text-gray-400 text-sm mt-2">รายละเอียดโปรเจกต์ 🎉</p>
 
             <!-- Tech Pills -->
             <div class="flex flex-wrap gap-2 mt-3">
               <span
                 class="px-3 py-1 bg-blue-600 text-white text-xs rounded-full font-medium"
-                >React</span
+                >HTML</span
               >
               <span
                 class="px-3 py-1 bg-green-600 text-white text-xs rounded-full font-medium"
-                >Node.js</span
+                >CSS/Tailwind</span
               >
               <span
                 class="px-3 py-1 bg-yellow-500 text-white text-xs rounded-full font-medium"
-                >MongoDB</span
+                >JavaScript</span
               >
             </div>
 
             <div class="flex justify-end mt-4">
               <a
-                href="https://www.example.com"
+                href="https://chayuthp.github.io/cloneSpotify/"
                 target="_blank"
                 class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm transition-colors"
               >
