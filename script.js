@@ -49,278 +49,258 @@ function createPopup(id, position = null) {
             </div>
         </div>
     </div>
-<div id="modalContent" class="p-4 md:p-6 flex-1 overflow-auto bg-gray-900">
-      <h1 class="text-2xl font-bold text-white mb-6">My Projects</h1>
+    <div id="modalContent-${id}" class="flex-1 overflow-auto showcase-container">
+      <!-- Header -->
+      <div class="showcase-header">
+        <h1 class="showcase-title">My Projects</h1>
+        <p class="showcase-subtitle">Explore my latest work and creative endeavors</p>
+      </div>
 
-      <!-- Grid Layout -->
-      <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- Card Template (1) -->
-        <div
-          class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
-        >
-          <img
-            class="w-full h-40 md:h-48 object-cover"
-            src="next1.png"
-            alt="Project Preview"
-          />
+      <!-- Filter Bar -->
+      <div class="project-filter-bar" id="filterBar-${id}">
+        <button class="filter-chip active" data-filter="all">All Projects</button>
+        <button class="filter-chip" data-filter="frontend">Frontend</button>
+        <button class="filter-chip" data-filter="fullstack">Full-Stack</button>
+        <button class="filter-chip" data-filter="clone">Clone</button>
+      </div>
 
-          <div class="p-5">
-            <h3 class="text-xl font-semibold text-white">Authentication FACEBOOK+LINE</h3>
-            <p class="text-gray-400 text-sm mt-2">รายละเอียดโปรเจกต์ 🎉</p>
-
-            <!-- Tech Pills -->
-            <div class="flex flex-wrap gap-2 mt-3">
-              <span
-                class="px-3 py-1 bg-blue-600 text-white text-xs rounded-full font-medium"
-                >Html</span
-              >
-              <span
-                class="px-3 py-1 bg-green-600 text-white text-xs rounded-full font-medium"
-                >Css/Tailwind</span
-              >
-              <span
-                class="px-3 py-1 bg-yellow-500 text-white text-xs rounded-full font-medium"
-                >Next.js</span
-              >
-            </div>
-
-            <div class="flex justify-end mt-4">
-              <a
-                href="#"
-                target="_blank"
-                onclick="event.preventDefault(); alert('Web deploy coming soon');"
-                class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm transition-colors"
-              >
-                View
-              </a>
-            </div>
-          </div>
-        </div>
-
+      <!-- Project Grid -->
+      <div class="project-masonry-grid" id="projectGrid-${id}">
         
-
-        <!-- Card Template (2) -->
-        <div
-          class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
-        >
-          <img
-            class="w-full h-40 md:h-48 object-cover"
-            src="cloneRandomWeb.png"
-            alt="Project Preview"
-          />
-
-          <div class="p-5">
-            <h3 class="text-xl font-semibold text-white">Clone Random Web</h3>
-            <p class="text-gray-400 text-sm mt-2">รายละเอียดโปรเจกต์ 🎉</p>
-
-            <!-- Tech Pills -->
-            <div class="flex flex-wrap gap-2 mt-3">
-              <span
-                class="px-3 py-1 bg-blue-600 text-white text-xs rounded-full font-medium"
-                >HTML</span
-              >
-              <span
-                class="px-3 py-1 bg-green-600 text-white text-xs rounded-full font-medium"
-                >CSS/Tailwind</span
-              >
-              <span
-                class="px-3 py-1 bg-yellow-500 text-white text-xs rounded-full font-medium"
-                >JavaScript</span
-              >
+        <!-- Project Card 1 -->
+        <div class="project-card" data-category="fullstack">
+          <div class="project-thumbnail">
+            <img src="next1.png" alt="Authentication Project" loading="lazy" />
+            <div class="project-overlay">
+              <span class="category-tag">Full-Stack</span>
             </div>
-
-            <div class="flex justify-end mt-4">
-              <a
-                href="https://chayuthp.github.io/cloneRandom1/"
-                target="_blank"
-                class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm transition-colors"
-              >
-                View
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Authentication FACEBOOK+LINE</h3>
+            <p class="project-tagline">Social authentication integration with Next.js</p>
+            <div class="tech-stack">
+              <span class="tech-pill frontend">HTML</span>
+              <span class="tech-pill styling">Tailwind</span>
+              <span class="tech-pill framework">Next.js</span>
+            </div>
+            <div class="project-footer">
+              <a href="#" onclick="event.preventDefault(); alert('Web deploy coming soon');" class="project-view-btn">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Card Template (3) -->
-        <div
-          class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
-        >
-          <img
-            class="w-full h-40 md:h-48 object-cover"
-            src="dynamicSortProject.png"
-            alt="Project Preview"
-          />
-
-          <div class="p-5">
-            <h3 class="text-xl font-semibold text-white">Dynamic Sort Project</h3>
-            <p class="text-gray-400 text-sm mt-2">รายละเอียดโปรเจกต์ 🎉</p>
-
-            <!-- Tech Pills -->
-            <div class="flex flex-wrap gap-2 mt-3">
-              <span
-                class="px-3 py-1 bg-blue-600 text-white text-xs rounded-full font-medium"
-                >HTML</span
-              >
-              <span
-                class="px-3 py-1 bg-green-600 text-white text-xs rounded-full font-medium"
-                >CSS/Tailwind</span
-              >
-              <span
-                class="px-3 py-1 bg-yellow-500 text-white text-xs rounded-full font-medium"
-                >JavaScript</span
-              >
+        <!-- Project Card 2 -->
+        <div class="project-card" data-category="clone">
+          <div class="project-thumbnail">
+            <img src="cloneRandomWeb.png" alt="Clone Random Web" loading="lazy" />
+            <div class="project-overlay">
+              <span class="category-tag">Clone</span>
             </div>
-
-            <div class="flex justify-end mt-4">
-              <a
-                href="https://chayuthp.github.io/dynamicSort/"
-                target="_blank"
-                class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm transition-colors"
-              >
-                View
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Clone Random Web</h3>
+            <p class="project-tagline">Pixel-perfect recreation of modern web designs</p>
+            <div class="tech-stack">
+              <span class="tech-pill frontend">HTML</span>
+              <span class="tech-pill styling">Tailwind</span>
+              <span class="tech-pill framework">JavaScript</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://chayuthp.github.io/cloneRandom1/" target="_blank" class="project-view-btn">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Card Template (4) -->
-        <div
-          class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
-        >
-          <img
-            class="w-full h-40 md:h-48 object-cover"
-            src="pokePic.png"
-            alt="Project Preview"
-          />
-
-          <div class="p-5">
-            <h3 class="text-xl font-semibold text-white">PokePic</h3>
-            <p class="text-gray-400 text-sm mt-2">รายละเอียดโปรเจกต์ 🎉</p>
-
-            <!-- Tech Pills -->
-            <div class="flex flex-wrap gap-2 mt-3">
-              <span
-                class="px-3 py-1 bg-blue-600 text-white text-xs rounded-full font-medium"
-                >HTML</span
-              >
-              <span
-                class="px-3 py-1 bg-green-600 text-white text-xs rounded-full font-medium"
-                >CSS/Tailwind</span
-              >
-              <span
-                class="px-3 py-1 bg-yellow-500 text-white text-xs rounded-full font-medium"
-                >JavaScript</span
-              >
+        <!-- Project Card 3 -->
+        <div class="project-card" data-category="frontend">
+          <div class="project-thumbnail">
+            <img src="dynamicSortProject.png" alt="Dynamic Sort Project" loading="lazy" />
+            <div class="project-overlay">
+              <span class="category-tag">Frontend</span>
             </div>
-
-            <div class="flex justify-end mt-4">
-              <a
-                href="https://chayuthp.github.io/pokeTest/"
-                target="_blank"
-                class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm transition-colors"
-              >
-                View
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Dynamic Sort Project</h3>
+            <p class="project-tagline">Interactive sorting visualization tool</p>
+            <div class="tech-stack">
+              <span class="tech-pill frontend">HTML</span>
+              <span class="tech-pill styling">CSS</span>
+              <span class="tech-pill framework">JavaScript</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://chayuthp.github.io/dynamicSort/" target="_blank" class="project-view-btn">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Card Template (5) -->
-        <div
-          class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
-        >
-          <img
-            class="w-full h-40 md:h-48 object-cover"
-            src="kanbanBoardToDo.png"
-            alt="Project Preview"
-          />
-
-          <div class="p-5">
-            <h3 class="text-xl font-semibold text-white">Kanban Board To Do</h3>
-            <p class="text-gray-400 text-sm mt-2">รายละเอียดโปรเจกต์ 🎉</p>
-
-            <!-- Tech Pills -->
-            <div class="flex flex-wrap gap-2 mt-3">
-              <span
-                class="px-3 py-1 bg-blue-600 text-white text-xs rounded-full font-medium"
-                >HTML</span
-              >
-              <span
-                class="px-3 py-1 bg-green-600 text-white text-xs rounded-full font-medium"
-                >CSS/Tailwind</span
-              >
-              <span
-                class="px-3 py-1 bg-yellow-500 text-white text-xs rounded-full font-medium"
-                >JavaScript</span
-              >
+        <!-- Project Card 4 -->
+        <div class="project-card" data-category="frontend">
+          <div class="project-thumbnail">
+            <img src="pokePic.png" alt="PokePic" loading="lazy" />
+            <div class="project-overlay">
+              <span class="category-tag">Frontend</span>
             </div>
-
-            <div class="flex justify-end mt-4">
-              <a
-                href="https://chayuthp.github.io/kanban/"
-                target="_blank"
-                class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm transition-colors"
-              >
-                View
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">PokePic</h3>
+            <p class="project-tagline">Pokémon encyclopedia with API integration</p>
+            <div class="tech-stack">
+              <span class="tech-pill frontend">HTML</span>
+              <span class="tech-pill styling">Tailwind</span>
+              <span class="tech-pill framework">JavaScript</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://chayuthp.github.io/pokeTest/" target="_blank" class="project-view-btn">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Card Template (6) -->
-        <div
-          class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
-        >
-          <img
-            class="w-full h-40 md:h-48 object-cover"
-            src="cloneSpotify.png"
-            alt="Project Preview"
-          />
-
-          <div class="p-5">
-            <h3 class="text-xl font-semibold text-white">Clone Spotify</h3>
-            <p class="text-gray-400 text-sm mt-2">รายละเอียดโปรเจกต์ 🎉</p>
-
-            <!-- Tech Pills -->
-            <div class="flex flex-wrap gap-2 mt-3">
-              <span
-                class="px-3 py-1 bg-blue-600 text-white text-xs rounded-full font-medium"
-                >HTML</span
-              >
-              <span
-                class="px-3 py-1 bg-green-600 text-white text-xs rounded-full font-medium"
-                >CSS/Tailwind</span
-              >
-              <span
-                class="px-3 py-1 bg-yellow-500 text-white text-xs rounded-full font-medium"
-                >JavaScript</span
-              >
+        <!-- Project Card 5 -->
+        <div class="project-card" data-category="frontend">
+          <div class="project-thumbnail">
+            <img src="kanbanBoardToDo.png" alt="Kanban Board" loading="lazy" />
+            <div class="project-overlay">
+              <span class="category-tag">Frontend</span>
             </div>
-
-            <div class="flex justify-end mt-4">
-              <a
-                href="https://chayuthp.github.io/cloneSpotify/"
-                target="_blank"
-                class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm transition-colors"
-              >
-                View
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Kanban Board To Do</h3>
+            <p class="project-tagline">Drag-and-drop task management board</p>
+            <div class="tech-stack">
+              <span class="tech-pill frontend">HTML</span>
+              <span class="tech-pill styling">CSS</span>
+              <span class="tech-pill framework">JavaScript</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://chayuthp.github.io/kanban/" target="_blank" class="project-view-btn">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </a>
             </div>
           </div>
         </div>
-        <!-- end -->
+
+        <!-- Project Card 6 -->
+        <div class="project-card" data-category="clone">
+          <div class="project-thumbnail">
+            <img src="cloneSpotify.png" alt="Clone Spotify" loading="lazy" />
+            <div class="project-overlay">
+              <span class="category-tag">Clone</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Clone Spotify</h3>
+            <p class="project-tagline">Spotify UI recreation with responsive design</p>
+            <div class="tech-stack">
+              <span class="tech-pill frontend">HTML</span>
+              <span class="tech-pill styling">Tailwind</span>
+              <span class="tech-pill framework">JavaScript</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://chayuthp.github.io/cloneSpotify/" target="_blank" class="project-view-btn">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-            `;
+  `;
 
   document.getElementById("windowContainer").appendChild(modal);
+
   // Ensure mobile starts in view
   if (!position && window.innerWidth < 768) {
     modal.style.left = "10px";
     modal.style.top = "10px";
   }
+
   makeDraggable(id);
   windows[id] = { modal, maximized: false };
+
+  // Initialize animations and interactions after modal is added to DOM
+  initializeShowcase(id);
+}
+
+// Initialize showcase animations and filter functionality
+function initializeShowcase(popupId) {
+  const modal = document.getElementById(popupId);
+  if (!modal) return;
+
+  // Animate cards with staggered delay
+  const cards = modal.querySelectorAll('.project-card');
+  cards.forEach((card, index) => {
+    setTimeout(() => {
+      card.classList.add('animate-in');
+      // Mark as loaded after animation
+      setTimeout(() => card.classList.add('loaded'), 500);
+    }, 100 + (index * 120)); // Stagger by 120ms
+  });
+
+  // Setup filter functionality
+  const filterBar = modal.querySelector(`#filterBar-${popupId}`);
+  const projectGrid = modal.querySelector(`#projectGrid-${popupId}`);
+
+  if (filterBar && projectGrid) {
+    const filterChips = filterBar.querySelectorAll('.filter-chip');
+
+    filterChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        // Update active state
+        filterChips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+
+        const filterValue = chip.dataset.filter;
+        const allCards = projectGrid.querySelectorAll('.project-card');
+
+        // Animate out then filter
+        allCards.forEach(card => {
+          card.classList.add('fade-out');
+        });
+
+        setTimeout(() => {
+          allCards.forEach(card => {
+            const category = card.dataset.category;
+            if (filterValue === 'all' || category === filterValue) {
+              card.classList.remove('hidden', 'fade-out');
+              // Re-trigger animation
+              card.classList.remove('animate-in');
+              setTimeout(() => card.classList.add('animate-in'), 10);
+            } else {
+              card.classList.add('hidden');
+              card.classList.remove('fade-out');
+            }
+          });
+        }, 300);
+      });
+    });
+  }
 }
 
 // ฟังก์ชันลากหน้าต่าง
