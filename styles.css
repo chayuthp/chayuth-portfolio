@@ -2,10 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dongle&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 body {
-    font-family: "Poppins", serif;
-    margin: 0;
-    padding: 0;
-  }
+  font-family: "Poppins", serif;
+  margin: 0;
+  padding: 0;
+}
 
 .resizable {
   resize: both;
@@ -17,7 +17,7 @@ body {
 
 @keyframes breathing {
   0% {
-    text-shadow: 
+    text-shadow:
       0 0 5px #ffd700,
       0 0 10px #ffd700,
       0 0 20px #ffd700,
@@ -26,8 +26,9 @@ body {
       0 0 50px #ffd700,
       0 0 60px #ffd700;
   }
+
   50% {
-    text-shadow: 
+    text-shadow:
       0 0 10px #ffd700,
       0 0 20px #ffd700,
       0 0 30px #ffd700,
@@ -36,8 +37,9 @@ body {
       0 0 60px #ffd700,
       0 0 70px #ffd700;
   }
+
   100% {
-    text-shadow: 
+    text-shadow:
       0 0 5px #ffd700,
       0 0 10px #ffd700,
       0 0 20px #ffd700,
@@ -50,7 +52,7 @@ body {
 
 .neon-lamp {
   color: #ffd700;
-  text-shadow: 
+  text-shadow:
     0 0 5px #ffd700,
     0 0 10px #ffd700,
     0 0 20px #ffd700,
@@ -89,18 +91,14 @@ body {
   --line: 1px;
   --color: rgba(255, 255, 255, 0.2);
 
-  background-image: linear-gradient(
-      -90deg,
+  background-image: linear-gradient(-90deg,
       transparent calc(var(--gap) - var(--line)),
       var(--color) calc(var(--gap) - var(--line) + 1px),
-      var(--color) var(--gap)
-    ),
-    linear-gradient(
-      0deg,
+      var(--color) var(--gap)),
+    linear-gradient(0deg,
       transparent calc(var(--gap) - var(--line)),
       var(--color) calc(var(--gap) - var(--line) + 1px),
-      var(--color) var(--gap)
-    );
+      var(--color) var(--gap));
   background-size: var(--gap) var(--gap);
 }
 
@@ -110,6 +108,7 @@ body {
     opacity: 0;
     transform: scale(0.8);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -122,6 +121,7 @@ body {
     opacity: 1;
     transform: scale(1);
   }
+
   to {
     opacity: 0;
     transform: scale(0.8);
@@ -148,6 +148,7 @@ body {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -158,6 +159,7 @@ body {
   from {
     transform: translateY(-30px);
   }
+
   to {
     transform: translateY(0);
   }
@@ -173,6 +175,7 @@ body {
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
   }
@@ -182,21 +185,17 @@ body {
 /* bg gradient */
 
 
-.bg-purple{
-    width: 100%;
-    height: 100%;
+.bg-purple {
+  width: 100%;
+  height: 100%;
 
-    background: radial-gradient(
-        circle,
-        oklch(0.15 0.2 330 / 0),
-        oklch(0.15 0.2 330 / 1)
-      ),
-      linear-gradient(
-        344deg in oklch,
-        oklch(0.3 0.37 310),
-        oklch(0.35 0.37 330),
-        oklch(0.3 0.37 310)
-      );
+  background: radial-gradient(circle,
+      oklch(0.15 0.2 330 / 0),
+      oklch(0.15 0.2 330 / 1)),
+    linear-gradient(344deg in oklch,
+      oklch(0.3 0.37 310),
+      oklch(0.35 0.37 330),
+      oklch(0.3 0.37 310));
 }
 
 :root {
@@ -216,9 +215,11 @@ body {
   0% {
     transform: rotate(0deg);
   }
+
   50% {
     transform: rotate(180deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -228,9 +229,11 @@ body {
   0% {
     transform: translateY(-50%);
   }
+
   50% {
     transform: translateY(50%);
   }
+
   100% {
     transform: translateY(-50%);
   }
@@ -240,9 +243,11 @@ body {
   0% {
     transform: translateX(-50%) translateY(-10%);
   }
+
   50% {
     transform: translateX(50%) translateY(10%);
   }
+
   100% {
     transform: translateX(-50%) translateY(-10%);
   }
@@ -273,12 +278,9 @@ body {
 
   .g1 {
     position: absolute;
-    background: radial-gradient(
-        circle at center,
+    background: radial-gradient(circle at center,
         rgba(var(--color1), 0.8) 0,
-        rgba(var(--color1), 0) 50%
-      )
-      no-repeat;
+        rgba(var(--color1), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -294,12 +296,9 @@ body {
 
   .g2 {
     position: absolute;
-    background: radial-gradient(
-        circle at center,
+    background: radial-gradient(circle at center,
         rgba(var(--color2), 0.8) 0,
-        rgba(var(--color2), 0) 50%
-      )
-      no-repeat;
+        rgba(var(--color2), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -315,12 +314,9 @@ body {
 
   .g3 {
     position: absolute;
-    background: radial-gradient(
-        circle at center,
+    background: radial-gradient(circle at center,
         rgba(var(--color3), 0.8) 0,
-        rgba(var(--color3), 0) 50%
-      )
-      no-repeat;
+        rgba(var(--color3), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -336,12 +332,9 @@ body {
 
   .g4 {
     position: absolute;
-    background: radial-gradient(
-        circle at center,
+    background: radial-gradient(circle at center,
         rgba(var(--color4), 0.8) 0,
-        rgba(var(--color4), 0) 50%
-      )
-      no-repeat;
+        rgba(var(--color4), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -357,12 +350,9 @@ body {
 
   .g5 {
     position: absolute;
-    background: radial-gradient(
-        circle at center,
+    background: radial-gradient(circle at center,
         rgba(var(--color5), 0.8) 0,
-        rgba(var(--color5), 0) 50%
-      )
-      no-repeat;
+        rgba(var(--color5), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: calc(var(--circle-size) * 2);
@@ -378,12 +368,9 @@ body {
 
   .interactive {
     position: absolute;
-    background: radial-gradient(
-        circle at center,
+    background: radial-gradient(circle at center,
         rgba(var(--color-interactive), 0.8) 0,
-        rgba(var(--color-interactive), 0) 50%
-      )
-      no-repeat;
+        rgba(var(--color-interactive), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: 100%;
@@ -396,13 +383,49 @@ body {
 }
 
 /* ========================================
+   NORTHERN AURORA BACKGROUND
+   ======================================== */
+
+.aurora-bg {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  background: #000000;
+}
+
+.aurora-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 50%, rgba(255, 20, 147, 0.15), transparent 50%),
+    radial-gradient(ellipse 160% 130% at 10% 10%, rgba(0, 255, 255, 0.12), transparent 60%),
+    radial-gradient(ellipse 160% 130% at 90% 90%, rgba(138, 43, 226, 0.18), transparent 65%),
+    radial-gradient(ellipse 110% 50% at 80% 30%, rgba(255, 215, 0, 0.08), transparent 40%),
+    #000000;
+  pointer-events: none;
+}
+
+/* Aurora content wrapper - ensures content stays above the aurora effect */
+.aurora-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* ========================================
    PROJECT SHOWCASE - PREMIUM DESIGN
    ======================================== */
 
 /* Showcase Container */
 .showcase-container {
   padding: 1.5rem;
-  background: linear-gradient(180deg, rgba(15, 15, 25, 0.95) 0%, rgba(10, 10, 20, 0.98) 100%);
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 50%, rgba(255, 20, 147, 0.15), transparent 50%),
+    radial-gradient(ellipse 160% 130% at 10% 10%, rgba(0, 255, 255, 0.12), transparent 60%),
+    radial-gradient(ellipse 160% 130% at 90% 90%, rgba(138, 43, 226, 0.18), transparent 65%),
+    radial-gradient(ellipse 110% 50% at 80% 30%, rgba(255, 215, 0, 0.08), transparent 40%),
+    #000000;
   min-height: 100%;
 }
 
@@ -415,7 +438,7 @@ body {
 .showcase-title {
   font-size: 2.25rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.7) 100%);
+  background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.7) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -503,7 +526,7 @@ body {
 /* 3D Hover Effect */
 .project-card:hover {
   transform: translateY(-15px) scale(1.02);
-  box-shadow: 
+  box-shadow:
     0 30px 60px -15px rgba(0, 0, 0, 0.5),
     0 0 40px rgba(102, 126, 234, 0.12),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -533,11 +556,9 @@ body {
 .project-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(102, 126, 234, 0.92) 0%,
-    rgba(118, 75, 162, 0.92) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(102, 126, 234, 0.92) 0%,
+      rgba(118, 75, 162, 0.92) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -675,12 +696,10 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.04) 50%,
-    transparent 100%
-  );
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.04) 50%,
+      transparent 100%);
   animation: shimmer 2s infinite;
   z-index: 1;
 }
@@ -690,8 +709,13 @@ body {
 }
 
 @keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 /* Hidden state for filtering */
@@ -711,33 +735,33 @@ body {
   .showcase-container {
     padding: 1rem;
   }
-  
+
   .showcase-title {
     font-size: 1.75rem;
   }
-  
+
   .showcase-subtitle {
     font-size: 0.9rem;
   }
-  
+
   .project-masonry-grid {
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }
-  
+
   .filter-chip {
     padding: 0.5rem 1.1rem;
     font-size: 0.8rem;
   }
-  
+
   .project-filter-bar {
     margin-bottom: 1.75rem;
   }
-  
+
   .project-content {
     padding: 1.25rem;
   }
-  
+
   .project-title {
     font-size: 1.1rem;
   }
@@ -748,14 +772,13 @@ body {
   .showcase-header {
     margin-bottom: 1.5rem;
   }
-  
+
   .project-filter-bar {
     gap: 0.5rem;
   }
-  
+
   .filter-chip {
     padding: 0.45rem 0.9rem;
     font-size: 0.75rem;
   }
 }
-
