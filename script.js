@@ -67,6 +67,39 @@ function createPopup(id, position = null) {
       <!-- Project Grid -->
       <div class="project-masonry-grid" id="projectGrid-${id}">
         
+        <!-- Project Card - Lotto (STARRED) -->
+        <div class="project-card starred" data-category="frontend">
+          <div class="starred-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            Favorite
+          </div>
+          <div class="project-thumbnail">
+            <img src="lotto1.png" alt="Thai Lottery" loading="lazy" />
+            <div class="project-overlay">
+              <span class="category-tag">Frontend</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">เลขเด็ดงวดหน้า 🎰</h3>
+            <p class="project-tagline">Generate lucky lottery numbers with real-time data</p>
+            <div class="tech-stack">
+              <span class="tech-pill frontend">HTML</span>
+              <span class="tech-pill styling">CSS</span>
+              <span class="tech-pill framework">JavaScript</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://chayuthp.github.io/lotto/" target="_blank" class="project-view-btn">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
         <!-- Project Card 1 -->
         <div class="project-card" data-category="fullstack">
           <div class="project-thumbnail">

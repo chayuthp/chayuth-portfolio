@@ -503,6 +503,140 @@ body {
   gap: 1.75rem;
 }
 
+/* Starred/Favorite Badge with Fire Effect */
+.starred-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #ff4500 0%, #ff6b00 30%, #ffa500 60%, #ffcc00 100%);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 2rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow:
+    0 0 20px rgba(255, 69, 0, 0.6),
+    0 0 40px rgba(255, 107, 0, 0.4),
+    0 0 60px rgba(255, 165, 0, 0.2),
+    inset 0 -2px 10px rgba(255, 200, 0, 0.3);
+  animation: fireFlicker 1.2s ease-in-out infinite alternate, firePulse 3s ease-in-out infinite;
+  overflow: visible;
+}
+
+.starred-badge::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 2rem;
+  background: linear-gradient(135deg, #ff4500, #ff8c00, #ffd700, #ff6b00);
+  z-index: -1;
+  animation: fireRotate 6s linear infinite;
+  filter: blur(8px);
+  opacity: 0.7;
+}
+
+.starred-badge::after {
+  content: '🔥';
+  position: absolute;
+  left: -1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  animation: fireEmoji 1.5s ease-in-out infinite alternate;
+}
+
+.starred-badge svg {
+  width: 14px;
+  height: 14px;
+  fill: #fff;
+  filter: drop-shadow(0 0 3px rgba(255, 200, 0, 0.8));
+  animation: starSpin 8s linear infinite;
+}
+
+@keyframes fireFlicker {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+
+  100% {
+    transform: scale(1.02) translateY(-1px);
+  }
+}
+
+@keyframes firePulse {
+
+  0%,
+  100% {
+    box-shadow:
+      0 0 20px rgba(255, 69, 0, 0.6),
+      0 0 40px rgba(255, 107, 0, 0.4),
+      0 0 60px rgba(255, 165, 0, 0.2),
+      inset 0 -2px 10px rgba(255, 200, 0, 0.3);
+  }
+
+  50% {
+    box-shadow:
+      0 0 30px rgba(255, 69, 0, 0.8),
+      0 0 60px rgba(255, 107, 0, 0.6),
+      0 0 90px rgba(255, 165, 0, 0.4),
+      inset 0 -2px 15px rgba(255, 200, 0, 0.5);
+  }
+}
+
+@keyframes fireRotate {
+  0% {
+    filter: blur(8px) hue-rotate(0deg);
+  }
+
+  50% {
+    filter: blur(10px) hue-rotate(15deg);
+  }
+
+  100% {
+    filter: blur(8px) hue-rotate(0deg);
+  }
+}
+
+@keyframes fireEmoji {
+  0% {
+    transform: translateY(-50%) scale(1);
+  }
+
+  100% {
+    transform: translateY(-55%) scale(1.1);
+  }
+}
+
+@keyframes starSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Starred Project Card Special Styling */
+.project-card.starred {
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.project-card.starred:hover {
+  border-color: rgba(255, 215, 0, 0.4);
+  box-shadow:
+    0 30px 60px -15px rgba(0, 0, 0, 0.5),
+    0 0 50px rgba(255, 215, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
 /* Project Card */
 .project-card {
   background: linear-gradient(145deg, rgba(35, 35, 50, 0.9), rgba(25, 25, 40, 0.95));
